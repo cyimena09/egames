@@ -1,10 +1,8 @@
 <?php
 include("../toolbox/formsValidator.php");
 include("../models/insert.php");
-// Variable de check d'erreur
-var_dump($_POST);
 
-$teamId = 1; // the value 1 in the 'FK_Team'column is reserved for single players
+$teamId = 1; // le teamID vaut 1 lorsque le joueur est seul cela correspond à 'Aucune équipe' dans la Db
 
 createPlayer($_POST, 1);
 

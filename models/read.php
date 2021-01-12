@@ -1,6 +1,20 @@
 <?php
 // ADMIN FUNCTIONS
-function getAdmin($email) {
+function getAdminById($id) {
+    include("connection.php");
+    $query = "SELECT * FROM admins WHERE id = :id";
+    $query_params = array(':id'=> $id);
+    try{
+        $stmt = $db->prepare($query);
+        $result = $stmt->execute($query_params);
+    } catch(PDOException $ex) {
+        die("Failed query : " . $ex->getMessage());
+    }
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $result[0];
+}
+
+function getAdminByEmail($email) {
     include("connection.php");
     $query = "SELECT * FROM admins WHERE email = :email";
     $query_params = array(':email'=> $email);

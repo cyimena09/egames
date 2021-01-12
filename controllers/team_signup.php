@@ -5,7 +5,7 @@ include("../models/insert.php");
 $maxPlayer = 1; // Nombre de joueur max pour la compétition
 
 // Si la session de joueur n'existe pas on la crée.
-// La session 'players' contient un tableau de joueur.
+// La session 'players' contient un tableau des joueurs d'une équipe.
 if (!isset($_SESSION['players'])) {
     $_SESSION['players'][0] = $_POST;
     header('Location: ../views/team_signup.php');
@@ -20,27 +20,17 @@ elseif (count($_SESSION['players']) == $maxPlayer) {
         $playerId = createPlayer($player, $teamId); // on insert le joueur avec l'id de son équipe récupéré précédemment
         insertPlayerTeam($playerId, $teamId, $player['game']); // on insert l'id du joueur et de son équipe dans la table intermédiaire 'players_teams'
     }
-
     // pour finir on envoie un email aux joueurs concernés pour confirmer leur inscription et on détruit la session
     session_destroy();
 }
 // Si on arrive dans ce bloc c'est qu'on a pas atteint le nombre de joueur max.
-// Donc on ajoute des joueurs dans la session.
+// Donc on ajoute le joueur du poste dans la session 'players'.
 elseif (isset($_SESSION['players'])) {
     array_push($_SESSION['players'], $_POST);
     header('Location: ../views/team_signup.php');
 } else {
     echo "un problème est survenue";
 }
-
-
-
-
-
-
-
-
-
 
 
 

@@ -8,7 +8,7 @@ include ("../templates/navbar.php")
         <a href="admin_log.php">
             <input type="button" value="ADMINISTRATEUR">
         </a>
-        <a href="team_or.php">
+        <a href="team_or_solo.php">
             <input type="button" value="JOUEUR">
         </a>
     </div>

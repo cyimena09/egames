@@ -1,7 +1,7 @@
 <?php
 include('../models/read.php');
 include('../toolbox/authentication.php');
-$logger = getAdmin($_POST['email']); // retourne (s'il existe) un email et un mot de passe correspondant à l'email en paramètre
+$logger = getAdminByEmail($_POST['email']); // retourne (s'il existe) un email et un mot de passe correspondant à l'email en paramètre
 $error = null;
 if (!is_null($logger)) {
     $email = $logger['email'];
