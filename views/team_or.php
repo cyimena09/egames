@@ -30,10 +30,10 @@ include("../templates/header.php");
         <!-- selection de la personne  -->
 		<div class="boutons__options">
             <div class="container__options">
-                <a href ="form_solo.php">
+                <a href ="solo_signup.php">
                     <input  type="button" value="SOLO">
                 </a>
-                <a href ="form_equipe.php">
+                <a href ="team_signup.php">
                     <input type="button" value="EQUIPE">
                 </a>
             </div>

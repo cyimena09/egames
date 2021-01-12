@@ -1,4 +1,5 @@
 <?php
+
 function checkNumber($elem) {
     return (preg_match('#[0-9]#', $elem)) ? true : false ;
 }
@@ -24,13 +25,13 @@ function checkEmptyArray($post) {
 }
 
 function checkTrimArray($post) {
-    foreach($post as $key => $elem){
+    foreach($post as $key => $elem) {
         $_POST[$key] = trim($elem);
     }
 }
 
 function htmlSpecialArray($post) {
-    foreach($post as $key => $elem){
+    foreach($post as $key => $elem) {
         $_POST[$key] = htmlspecialchars($elem);
     }
 }

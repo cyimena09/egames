@@ -2,13 +2,12 @@
 // ADMIN FUNCTIONS
 function createAdmin($admin) {
     include('connection.php');
-    $insertedId = null;
-    $query = "INSERT INTO admins (firstName, lastName, birthDate, email, password)
-            VALUES (:firstName, :lastName, :birthDate, :email, :password)";
+    $admin['password'] = password_hash($admin['password'], PASSWORD_DEFAULT);
+    $query = "INSERT INTO admins (firstName, lastName, email, password)
+            VALUES (:firstName, :lastName, :email, :password)";
     $query_params = array(
         ':firstName' => $admin['firstName'],
         ':lastName' => $admin['lastName'],
-        ':birthDate' => $admin['email'],
         ':email' => $admin['email'],
         ':password' => $admin['password']);
     try {
@@ -36,6 +35,7 @@ function createPlayer($player, $teamID) {
     try {
         $stmt = $db->prepare($query);
         $result = $stmt->execute($query_params);
+        return $insertedId = $db->lastInsertId();
     } catch(PDOException $ex) {
         die("Failed query : " . $ex->getMessage());
     }
@@ -67,6 +67,7 @@ function createTeam($name) {
     try {
         $stmt = $db->prepare($query);
         $result = $stmt->execute($query_params);
+        return $insertedId = $db->lastInsertId();
     } catch(PDOException $ex) {
         die("Failed query : " . $ex->getMessage());
     }

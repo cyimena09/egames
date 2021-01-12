@@ -7,7 +7,7 @@ include("../templates/navbar.php");
     <div class="box_form">
         <h2>Formulaire pour Solo</h2>
         <div class="formulaire">
-            <form id="formulaire-inside" action="../controllers/signin_single_player.php" method="POST">
+            <form id="formulaire-inside" action="../controllers/solo_signup.php" method="POST">
 
                 <label for="firstName">Prénom</label>
                 <input type="text" name="firstName" id="firstName">

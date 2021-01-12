@@ -19,21 +19,27 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd60d9c4-fcf6-44aa-ace5-12298c0ec422" name="Default Changelist" comment="Initial commit">
-      <change afterPath="$PROJECT_DIR$/controllers/signin_single_player.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/footer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/header.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/navbar.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/admin-space.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/admin-space.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/signin.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/signin_team.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/team-register.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin_log_header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/user-space.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/user-space.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/connection.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/connection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/delete.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/insert.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/insert.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/read.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/read.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/update.php" afterDir="false" />
+    <list default="true" id="bd60d9c4-fcf6-44aa-ace5-12298c0ec422" name="Default Changelist" comment="add views and start controllers development">
+      <change afterPath="$PROJECT_DIR$/controllers/admin_log.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/admin_signup.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/team_signup.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/toolbox/authentication.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/admin_signup.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/admin_space.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/team_signup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/signin_single_player.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/solo_signup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/signin_team.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/insert.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/insert.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/read.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/read.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toolbox/formsValidator.php" beforeDir="false" afterPath="$PROJECT_DIR$/toolbox/formsValidator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/admin_log.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin_log.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/form_equipe.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/form_solo.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/solo_signup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/joueurInscription.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/new_admin.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/team_or.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/team_or.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +69,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../Jeux" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../StaffDay/staffday" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -81,7 +87,8 @@
       <updated>1609966922805</updated>
       <workItem from="1609966925080" duration="287000" />
       <workItem from="1610309470809" duration="185000" />
-      <workItem from="1610397946670" duration="7916000" />
+      <workItem from="1610397946670" duration="8024000" />
+      <workItem from="1610446248514" duration="12274000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1609967204145</created>
@@ -90,7 +97,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609967204145</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add views and start controllers development">
+      <created>1610406382336</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1610406382336</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -106,10 +120,12 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="add views and start controllers development" />
+    <option name="LAST_COMMIT_MESSAGE" value="add views and start controllers development" />
   </component>
   <component name="WindowStateProjectService">
     <state x="667" y="163" key="#PHP" timestamp="1610398239395">
@@ -120,10 +136,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610398234145" />
-    <state x="740" y="261" key="FileChooserDialogImpl" timestamp="1610399831922">
+    <state x="740" y="261" key="FileChooserDialogImpl" timestamp="1610452149459">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610399831922" />
+    <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610452149459" />
     <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1610309663331" />
     <state x="838" y="418" key="Github.ShareDialog" timestamp="1609966969200">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -133,13 +149,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="632" y="225" key="Github.UntrackedFilesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1609966979341" />
-    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1610403822625">
+    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1610456738681">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610403822625" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1609967208355">
+    <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610456738681" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1610406390225">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1609967208355" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610406390225" />
   </component>
 </project>

@@ -11,6 +11,6 @@
     <link rel="stylesheet" href="../resources/style/css/body.css">
     <link rel="stylesheet" href="../resources/style/css/boutons.css">
     <link rel="stylesheet" href="../resources/style/css/formulaire.css">
-    <title>Jeux</title>
+    <title>E-Games</title>
 </head>
 <body>

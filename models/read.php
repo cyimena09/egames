@@ -1,9 +1,9 @@
 <?php
 // ADMIN FUNCTIONS
-function getAdmin($id) {
+function getAdmin($email) {
     include("connection.php");
-    $query = "SELECT * FROM admins WHERE id = :id";
-    $query_params = array(':id'=> $id);
+    $query = "SELECT * FROM admins WHERE email = :email";
+    $query_params = array(':email'=> $email);
     try{
         $stmt = $db->prepare($query);
         $result = $stmt->execute($query_params);
@@ -11,7 +11,7 @@ function getAdmin($id) {
         die("Failed query : " . $ex->getMessage());
     }
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    return $result;
+    return $result[0];
 }
 
 // PLAYER FUNCTIONS
