@@ -1,0 +1,1 @@
+<h2>Félicitation votre enregistrement est validé</h2>

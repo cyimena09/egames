@@ -5,6 +5,8 @@ include("../models/insert.php");
 $teamId = 1; // le teamID vaut 1 lorsque le joueur est seul cela correspond à 'Aucune équipe' dans la Db
 
 createPlayer($_POST, 1);
+header("Location: ../views/success_signup.php");
+
 
 //
 //$error = null;

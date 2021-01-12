@@ -9,7 +9,7 @@
             <div class="header_navbar--menu">
                 <a href="home.php" class="header__navbar--menu--link">Accueil</a>
                 <a href="admin_log.php" class="header__navbar--menu--link">Administrateur</a>
-                <a href="team_or.php" class="header__navbar--menu--link">Joueur</a>
+                <a href="team_or_solo.php" class="header__navbar--menu--link">Joueur</a>
             </div>
             <!--
                 <div class="header__navbar--toggle">

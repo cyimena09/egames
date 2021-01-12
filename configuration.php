@@ -1,0 +1,2 @@
+<?php
+$maxPlayer = 3;
