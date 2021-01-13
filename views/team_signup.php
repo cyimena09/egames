@@ -1,29 +1,34 @@
 <?php
 session_start();
-//session_destroy();
 include("../templates/header.php");
 include("../templates/navbar.php");
 include("../models/read.php");
 include ("../configuration.php");
 $games = getGames();
+$previousPlayer = null;
+
 if (isset($_GET['player'])){
     $player = $_GET['player'];
 } else {
     $player = 0;
 }
 
-$previousPlayer = null;
+if (isset($_GET['nextable'])){
+    $nextable = false;
+} else {
+    $nextable = true;
+}
+
 if(isset($_GET['player'])) {
     $previousPlayer = $_GET['player'];
 }
+
 if(isset($_SESSION['players'])){
     $nbRegisteredPlayer = count($_SESSION['players']);
-    echo '<pre>' , var_dump($_SESSION['players']) , '</pre>';
 } else {
     $nbRegisteredPlayer = 0;
 }
 ?>
-<!-- selection de la personne  -->
 <div class="box">
     <div class="box_form">
         <h2>Formulaire pour équipe</h2>
@@ -58,10 +63,12 @@ if(isset($_SESSION['players'])){
                             <?php if (isset($_SESSION['players'][$player])) { ?> value="<?php echo $_SESSION['players'][$player]['pseudo'];?>" <?php }?> >
                     </div>
                     <br>
+                    <p style="color: red"><?php if(isset($_GET['error'])){echo $_GET['error'];} ?></p>
                     <br>
                     <input type="submit" id="add" value="Ajouter <?php echo $player +1 . " /" . $maxPlayer?>">
                 <?php }?>
 
+<!--                CHOIX DE L'EQUIPE ET DU JEU-->
                 <?php if ($maxPlayer == $player) { ?>
                     <label for="teamName">Nom de l'équipe</label>
                     <input type="text" name="teamName" id="teamName">
@@ -73,12 +80,15 @@ if(isset($_SESSION['players'])){
                             <option value="<?php echo $game['id']; ?>"><?php echo $game['name'];?></option>
                         <?php }?>
                     </select>
+
+                    <p style="color: red"><?php if(isset($_GET['error'])){echo $_GET['error'];} ?></p>
                 <?php }?>
+ <!--                FIN DE L'EQUIPE ET DU JEU-->
             </form>
 
             <?php if ($player > 0) { ?><a href="team_signup.php?player=<?php echo $player - 1 ?>">Précédent</a><?php }?>
 
-            <?php if ($player < $nbRegisteredPlayer) { ?><a href="team_signup.php?player=<?php echo $player + 1 ?>">Suivant</a><?php }?>
+            <?php if ($player < $nbRegisteredPlayer && $player < $maxPlayer && $nextable) { ?><a href="team_signup.php?player=<?php echo $player + 1 ?>">Suivant</a><?php }?>
         </div>
     </div>
 </div>

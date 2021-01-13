@@ -2,7 +2,6 @@
 include("../templates/header.php");
 include ("../templates/navbar.php")
 ?>
-<!-- selection de la personne  -->
 <div class="boutons__options">
     <div class="container__options">
         <a href="admin_log.php">

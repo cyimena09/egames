@@ -1,7 +1,6 @@
 <?php
 include("../templates/admin_log_header.php");
 ?>
-<!-- selection de la personne  -->
 <div class="box-filter"></div>
 <div class="box_form">
     <h1>Login Administrateur</h1>
@@ -10,7 +9,7 @@ include("../templates/admin_log_header.php");
         <input type="password" name="password" placeholder="Mot de passe">
         <input type="submit" value="CONNECTION">
     </form>
-    <div class="error"><?php if(isset($_GET['error'])){echo $_GET['error'];} ?></div>
+    <div style="color: red"><?php if(isset($_GET['error'])){echo $_GET['error'];} ?></div>
 
 </div>
 <?php

@@ -2,7 +2,6 @@
     <h2>Nouvel administrateur</h2>
 
     <form  action="../controllers/admin_signup.php" method="post">
-
         <label for="firstName">Prénom</label>
         <input id="firstName" type="text" name="firstName"/>
 
