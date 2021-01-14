@@ -1,6 +1,8 @@
 <?php
+include("../models/read.php");
 include("../templates/header.php");
 include("../templates/navbar.php");
+$games = getGames();
 ?>
 <!-- selection de la personne  -->
 <div class="box">
@@ -21,22 +23,22 @@ include("../templates/navbar.php");
                 <label for="email">E-mail</label>
                 <input type="email" name="email" id="email">
 
-                <label for="password">Mot de passe</label>
-                <input type="text" name="password" id="password">
-
                 <label for="pseudo">Pseudo</label>
                 <input type="text" name="pseudo" id="pseudo">
 
-                <label for="game">Jeux</label>
+                <label for="game">Jeu</label>
                 <select name="game" id="game">
-                    <option value="lol">Legue of Legends</option>
-                    <option value="counter">Counter strike: Global Offensive</option>
-                    <option value="overwatch">Overwatch</option>
+                    <?php foreach ($games as $game){ ?>
+                        <option value="<?php echo $game['id']; ?>"><?php echo $game['name'];?></option>
+                    <?php }?>
                 </select>
                 <br>
                 <br>
                 <input type="submit" value="Envoyer">
             </form>
+
+            <p style="color: red"><?php if(isset($_GET['error'])){echo $_GET['error'];} ?></p>
+
         </div>
     </div>
 </div>

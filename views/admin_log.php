@@ -10,7 +10,6 @@ include("../templates/admin_log_header.php");
         <input type="submit" value="CONNECTION">
     </form>
     <div style="color: red"><?php if(isset($_GET['error'])){echo $_GET['error'];} ?></div>
-
 </div>
 <?php
 include("../templates/footer.php");

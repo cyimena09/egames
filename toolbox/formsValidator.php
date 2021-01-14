@@ -16,7 +16,7 @@ function checkFormatMail($elem) {
     return (preg_match('#^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$#', $elem));
 }
 
-function checkValidDate($elem){
+function checkValidDate($elem) {
     if (preg_match("/^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$/", $elem)) {
         return true;
     } else {
@@ -24,7 +24,7 @@ function checkValidDate($elem){
     }
 }
 
-function getAgeFromDate($elem){
+function getAgeFromDate($elem) {
     if(checkValidDate($elem)){
         $age = date('Y') - $elem;
         if (date('md') < date('md', strtotime($elem))) {

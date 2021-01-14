@@ -34,13 +34,13 @@ function createPlayer($player, $teamID) {
     try {
         $stmt = $db->prepare($query);
         $result = $stmt->execute($query_params);
-        return $insertedId = $db->lastInsertId();
+        return $insertedId = $db->lastInsertId(); // on récupère l'id du joueur créé
     } catch(PDOException $ex) {
         die("Failed query : " . $ex->getMessage());
     }
 }
 
-function insertPlayerTeam($playerID, $teamID, $gameID) {
+function insertParticipation($playerID, $teamID, $gameID) {
     include('connection.php');
     $query = "INSERT INTO participations (FK_Player, FK_Team, FK_Game)
                 VALUES (:playerID, :teamID, :gameID)";

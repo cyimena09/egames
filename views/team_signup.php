@@ -29,6 +29,7 @@ if(isset($_SESSION['players'])){
     $nbRegisteredPlayer = 0;
 }
 ?>
+
 <div class="box">
     <div class="box_form">
         <h2>Formulaire pour équipe</h2>

@@ -39,7 +39,7 @@ if(isset($_POST['game']) && isset($_POST['teamName'])) {
         if(count($_SESSION['players']) == $maxPlayer) {
             foreach ($players as $player) {
                 $playerId = createPlayer($player, $teamId); // On insert le joueur avec l'id de son équipe récupéré précédemment.
-                insertPlayerTeam($playerId, $teamId, $game); // On insert l'id du joueur et de son équipe dans la table intermédiaire 'players_teams'.
+                insertParticipation($playerId, $teamId, $game); // On insert l'id du joueur et de son équipe dans la table intermédiaire 'players_teams'.
                 }
             header("Location: ../views/success_signup.php");
             // On envoie un mail à chaque joueur pour confirmer leur inscription.

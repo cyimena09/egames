@@ -1,4 +1,4 @@
-<!-- bare de navigation  -->
+<!-- barre de navigation  -->
 <div class="header">
     <div class="header__texture"></div>
     <div class="container">

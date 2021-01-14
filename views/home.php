@@ -2,6 +2,7 @@
 include("../templates/header.php");
 include ("../templates/navbar.php")
 ?>
+
 <div class="boutons__options">
     <div class="container__options">
         <a href="admin_log.php">
@@ -12,6 +13,7 @@ include ("../templates/navbar.php")
         </a>
     </div>
 </div>
+
 <?php
 include("../templates/footer.php");
 ?>

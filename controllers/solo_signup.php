@@ -1,30 +1,27 @@
 <?php
 include("../toolbox/formsValidator.php");
 include("../models/insert.php");
+$player = $_POST;
+$error = true;
 
-$teamId = 1; // le teamID vaut 1 lorsque le joueur est seul cela correspond à 'Aucune équipe' dans la Db
+if(checkEmptyArray($player)) {
+    $error = urlencode("veuillez remplir tous les champs");
+    header("Location: ../views/solo_signup.php?error=$error");
+} elseif (checkNumber($player['firstName']) || checkNumber($player['lastName'])) {
+    $error = urlencode("Le prénom et le nom ne peuvent pas contenir de chiffres");
+    header("Location: ../views/solo_signup.php?error=$error");
+} elseif (!checkFormatMail($player['email'])) {
+    $error = urlencode("L'email n'est pas correct");
+    header("Location: ../views/solo_signup.php?error=$error");
+} elseif (getAgeFromDate($player['birthDate']) < $minAge) {
+    $error = urlencode("Le joueur doit avoir au moins $minAge ans");
+    header("Location: ../views/solo_signup.php?error=$error");
+} else {
+    $error = false;
+}
 
-createPlayer($_POST, 1);
-header("Location: ../views/success_signup.php");
-
-
-//
-//$error = null;
-//htmlSpecialArray($_POST);
-//checkEmptyArray($_POST);
-//checkTrimArray($_POST);
-//if($error==null){
-//    if($_POST['Password'] == $_POST['ConfirmPassword']){
-//        $error = "ok";
-//    }
-//    else {
-//        $error = 'Les mots de passe ne correspondent pas';
-//    }
-//}
-////REDIRECTIONS
-//if($error == 'ok'){
-//    insertAdmin($_POST);
-//    header('Location: ../view/confirmAdminRegister.php');
-//}else{
-//    header('Location: ../view/adminRegister.php?erreur='.$error);
-//}
+if($error == false) {
+    $playerId = createPlayer($player, null);
+    insertParticipation($playerId, null, $player['game']);
+    header("Location: ../views/success_signup.php");
+}

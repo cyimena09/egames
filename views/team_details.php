@@ -10,10 +10,9 @@ $i=0;
 ?>
 
 <h2>Equipe : " <?php echo $team['teamName']; ?> "</h2>
-
 <h2>Jeu : " <?php echo $team['game']; ?> "</h2>
 
-<a style="margin-left: 30%" href="../views/team_update.php?id=<?php echo $team['id'];?>">Modifier le nom de l'équipe ou le jeu</a>
+<a style="margin-left: 25%" href="../views/team_update.php?id=<?php echo $team['id'];?>">Modifier le nom de l'équipe ou le jeu</a>
 <div style="margin-left: 25%">
     <table class="table table-dark col-8">
         <thead>
@@ -43,5 +42,6 @@ $i=0;
         </tbody>
     </table>
 </div>
+    <a style="margin-left: 25%" href="../views/admin_space.php">Retour</a>
 
 <?php include("../templates/footer.php");

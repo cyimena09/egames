@@ -35,7 +35,7 @@ function getPlayers() {
     $query_params = array();
     try{
         $stmt = $db->prepare($query);
-        $result = $stmt->execute($query_params);
+        $result = $stmt->execute();
     } catch(PDOException $ex) {
         die("Failed query : " . $ex->getMessage());
     }
@@ -73,6 +73,41 @@ function getPlayersByTeamId($id) {
     return $result;
 }
 
+function getPLayersWithoutTeam() {
+    include("connection.php");
+    $query = "SELECT p.id, p.firstName, p.lastName, p.pseudo, p.birthDate, g.name as game
+                FROM players p
+                INNER JOIN participations pa ON pa.FK_Player = p.id
+                INNER JOIN games g ON g.id = pa.FK_Game
+                WHERE p.FK_Team is null";
+    try{
+        $stmt = $db->prepare($query);
+        $result = $stmt->execute();
+    } catch(PDOException $ex) {
+        die("Failed query : " . $ex->getMessage());
+    }
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $result;
+}
+
+function getPlayerByIdAndGame($id) {
+    include("connection.php");
+    $query = "SELECT p.id, p.firstName, p.lastName,p.email, p.pseudo, p.birthDate, g.name as game, g.id as gameId
+                FROM players p
+                INNER JOIN participations pa ON pa.FK_Player = p.id
+                INNER JOIN games g ON g.id = pa.FK_Game
+                WHERE p.id = :id";
+    $query_params = array(':id'=> $id);
+    try{
+        $stmt = $db->prepare($query);
+        $result = $stmt->execute($query_params);
+    } catch(PDOException $ex) {
+        die("Failed query : " . $ex->getMessage());
+    }
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $result[0];
+}
+
 // TEAM FUNCTIONS
 function getTeams() {
     include("connection.php");
@@ -80,10 +115,9 @@ function getTeams() {
                 FROM teams t
                 INNER JOIN participations p ON p.FK_Team = t.id
                 INNER JOIN games g ON g.id = p.FK_Game";
-    $query_params = array();
     try{
         $stmt = $db->prepare($query);
-        $result = $stmt->execute($query_params);
+        $result = $stmt->execute();
     } catch(PDOException $ex) {
         die("Failed query : " . $ex->getMessage());
     }
@@ -109,16 +143,13 @@ function getTeamById($id) {
     return $result[0];
 }
 
-
-
 // GAME FUNCTIONS
 function getGames() {
     include("connection.php");
     $query = "SELECT * FROM games";
-    $query_params = array();
     try{
         $stmt = $db->prepare($query);
-        $result = $stmt->execute($query_params);
+        $result = $stmt->execute();
     } catch(PDOException $ex) {
         die("Failed query : " . $ex->getMessage());
     }

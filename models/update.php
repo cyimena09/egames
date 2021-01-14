@@ -75,3 +75,20 @@ function updateParticipationByTeamId($gameId, $teamId) {
         die("Failed query : " . $ex->getMessage());
     }
 }
+
+function updateParticipationByPlayerId($gameId, $playerId) {
+    include('connection.php');
+    $insertedId = null;
+    $query = "UPDATE participations 
+                SET FK_Game = :FK_Game 
+                WHERE FK_Player = :FK_Player";
+    $query_params = array(
+        ':FK_Game' => $gameId,
+        ':FK_Player' => $playerId);
+    try {
+        $stmt = $db->prepare($query);
+        $result = $stmt->execute($query_params);
+    } catch(PDOException $ex) {
+        die("Failed query : " . $ex->getMessage());
+    }
+}

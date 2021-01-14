@@ -5,8 +5,6 @@ include("../templates/navbar.php");
 if(isset($_GET)){
     $player = getPlayer($_GET['id']);
 }
-//echo '<pre>' , var_dump($player) , '</pre>';
-
 ?>
 
 <div style="margin-left: 40%">
@@ -36,3 +34,4 @@ if(isset($_GET)){
 <?php
 include("../templates/footer.php");
 ?>
+
