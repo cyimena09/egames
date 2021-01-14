@@ -34,11 +34,11 @@ if(isset($_SESSION['players'])){
     <div class="box_form">
         <h2>Formulaire pour équipe</h2>
         <div class="formulaire">
-            <form id="formulaire-inside" action="../controllers/team_signup.php?player=<?php echo $player?>" method="POST">
+            <form style="display: flex; flex-direction: column; align-items: center" id="formulaire-inside" action="../controllers/team_signup.php?player=<?php echo $player?>" method="POST">
 
                 <?php if ($player < $maxPlayer) { ?>
                     <br>
-                    <div>
+
                         <label for="firstName">Prénom</label>
                         <input type="text" name="firstName" id="firstName"
                             <?php if (isset($_SESSION['players'][$player])) { ?> value="<?php echo $_SESSION['players'][$player]['firstName'];?>" <?php }?> >
@@ -58,7 +58,7 @@ if(isset($_SESSION['players'])){
                         <label for="pseudo">Pseudo</label>
                         <input type="text" name="pseudo" id="pseudo"
                             <?php if (isset($_SESSION['players'][$player])) { ?> value="<?php echo $_SESSION['players'][$player]['pseudo'];?>" <?php }?> >
-                    </div>
+
                     <br>
                     <p style="color: red"><?php if(isset($_GET['error'])){echo $_GET['error'];} ?></p>
                     <br>

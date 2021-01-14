@@ -8,6 +8,7 @@ if(isset($_GET)) {
 }
 ?>
 
+<h2>Modifier un joueur</h2>
 <div style="margin-left: 40%">
     <form style="display: flex; flex-direction: column" id="formulaire-inside" action="../controllers/solo_update.php?playerId=<?php echo $player['id'] ?>" method="POST">
 

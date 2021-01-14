@@ -6,7 +6,7 @@ if(isset($_GET)){
     $player = getPlayer($_GET['id']);
 }
 ?>
-
+<h2>Modifier un joueur</h2>
 <div style="margin-left: 40%">
     <form style="display: flex; flex-direction: column" id="formulaire-inside" action="../controllers/player_update.php?teamId=<?php echo $player['FK_Team'] ?>&playerId=<?php echo $player['id'] ?>" method="POST">
 

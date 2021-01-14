@@ -1,6 +1,7 @@
 <?php
-include("../toolbox/formsValidator.php");
 include("../models/insert.php");
+include("../toolbox/formsValidator.php");
+include("../toolbox/messenger.php");
 $player = $_POST;
 $error = true;
 
@@ -23,5 +24,14 @@ if(checkEmptyArray($player)) {
 if($error == false) {
     $playerId = createPlayer($player, null);
     insertParticipation($playerId, null, $player['game']);
-    header("Location: ../views/success_signup.php");
+
+    if(sendConfirmMail($player['email'])) {
+        // Si l'envoie du mail de confirmation réussi, on détruit la session.
+        session_destroy();
+        header("Location: ../views/success_signup.php");
+    } else {
+        var_dump($player);
+
+        echo "Une erreur est survenue";
+    }
 }

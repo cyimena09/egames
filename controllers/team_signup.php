@@ -1,8 +1,9 @@
 <?php
 session_start();
-include("../toolbox/formsValidator.php");
 include("../models/insert.php");
+include("../toolbox/formsValidator.php");
 include("../configuration.php");
+include("../toolbox/messenger.php");
 
 if (isset($_GET['player'])){
     $player = $_GET['player'];
@@ -40,12 +41,13 @@ if(isset($_POST['game']) && isset($_POST['teamName'])) {
             foreach ($players as $player) {
                 $playerId = createPlayer($player, $teamId); // On insert le joueur avec l'id de son équipe récupéré précédemment.
                 insertParticipation($playerId, $teamId, $game); // On insert l'id du joueur et de son équipe dans la table intermédiaire 'players_teams'.
-                }
-            header("Location: ../views/success_signup.php");
-            // On envoie un mail à chaque joueur pour confirmer leur inscription.
-            // On détruit la session.
+                // On envoie un mail à chaque joueur pour confirmer leur inscription.
+                sendConfirmMail($player['email']);
+            }
+            // une fois l'inscription cloturé on détruit la session et on redirige
             session_destroy();
-        } else {
+            header("Location: ../views/success_signup.php");
+            } else {
             $error = urlencode("L'inscription ne peut pas s'effectuer, vous avez dépassé le nombre de joueur maximum");
             header("Location: ../views/team_signup.php?player=$player&error=$error");
         }

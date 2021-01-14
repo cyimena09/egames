@@ -24,7 +24,7 @@ include("../templates/navbar.php");
 
         <input type="submit" value="Enregistrer" />
     </form>
-    <div class="error"><?php if(isset($_GET['erreur'])){echo $_GET['erreur'];} ?></div>
+    <div style="color: red;" class="error"><?php if(isset($_GET['error'])){ echo $_GET['error']; } ?></div>
 </div>
 
 <?php
