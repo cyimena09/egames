@@ -54,10 +54,6 @@ if(isset($_SESSION['players'])){
                         <input type="email" name="email" id="email"
                             <?php if (isset($_SESSION['players'][$player])) { ?> value="<?php echo $_SESSION['players'][$player]['email'];?>" <?php }?> >
 
-                        <label for="password">Mot de passe</label>
-                        <input type="text" name="password" id="password"
-                            <?php if (isset($_SESSION['players'][$player])) { ?> value="<?php echo $_SESSION['players'][$player]['password'];?>" <?php }?> >
-
                         <label for="pseudo">Pseudo</label>
                         <input type="text" name="pseudo" id="pseudo"
                             <?php if (isset($_SESSION['players'][$player])) { ?> value="<?php echo $_SESSION['players'][$player]['pseudo'];?>" <?php }?> >
@@ -88,7 +84,7 @@ if(isset($_SESSION['players'])){
 
             <?php if ($player > 0) { ?><a href="team_signup.php?player=<?php echo $player - 1 ?>">Précédent</a><?php }?>
 
-            <?php if ($player < $nbRegisteredPlayer && $player < $maxPlayer && $nextable) { ?><a href="team_signup.php?player=<?php echo $player + 1 ?>">Suivant</a><?php }?>
+            <?php if ($player < $nbRegisteredPlayer && $player < $maxPlayer && $nextable) { ?><a href="../controllers/team_signup.php?player=<?php echo $player + 1 ?>">Suivant</a><?php }?>
         </div>
     </div>
 </div>

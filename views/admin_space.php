@@ -1,7 +1,6 @@
 <?php
 include("../models/read.php");
-
-$players = getPlayers();
-echo '<pre>' , var_dump($players) , '</pre>';
-
-echo "Bienvenue dans l'espace administrateur";
+include("../templates/header.php");
+include("../views/team_list.php");
+include("../views/solo_list.php");
+include("../templates/footer.php");

@@ -57,25 +57,32 @@ if(isset($_POST['game']) && isset($_POST['teamName'])) {
 // --------------------------------------------------------------------------------------------------
 
 else {
-    // On conserve les données encodées par l'utilisateur, qu'elles soient correctes ou pas
-    // pour éviter que l'utilisateur doivent tout réencoder
-    $_SESSION['players'][$player] = $_POST;
+
     $nextable = false; // désactive le bouton next du formulaire
 
-    if(checkEmptyArray($_POST)) {
-        $error = urlencode("veuillez remplir tous les champs");
-        header("Location: ../views/team_signup.php?player=$player&error=$error&nextable=$nextable");
-    } elseif (checkNumber($_POST['firstName']) || checkNumber($_POST['lastName'])) {
-        $error = urlencode("Le prénom et le nom ne peuvent pas contenir de chiffres");
-        header("Location: ../views/team_signup.php?player=$player&error=$error&nextable=$nextable");
-    } elseif (!checkFormatMail($_POST['email'])) {
-        $error = urlencode("L'email n'est pas correct");
-        header("Location: ../views/team_signup.php?player=$player&error=$error");
-    } elseif (getAgeFromDate($_POST['birthDate']) < $minAge) {
-        $error = urlencode("Le joueur doit avoir au moins $minAge ans");
-        header("Location: ../views/team_signup.php?player=$player&error=$error&nextable=$nextable");
+    if(!empty($_POST)) {
+        // On conserve les données encodées par l'utilisateur, qu'elles soient correctes ou pas
+        // pour éviter que l'utilisateur doivent tout réencoder
+        $_SESSION['players'][$player] = $_POST;
+
+        if(checkEmptyArray($_POST)) {
+            $error = urlencode("veuillez remplir tous les champs");
+            header("Location: ../views/team_signup.php?player=$player&error=$error&nextable=$nextable");
+        } elseif (checkNumber($_POST['firstName']) || checkNumber($_POST['lastName'])) {
+            $error = urlencode("Le prénom et le nom ne peuvent pas contenir de chiffres");
+            header("Location: ../views/team_signup.php?player=$player&error=$error&nextable=$nextable");
+        } elseif (!checkFormatMail($_POST['email'])) {
+            $error = urlencode("L'email n'est pas correct");
+            header("Location: ../views/team_signup.php?player=$player&error=$error");
+        } elseif (getAgeFromDate($_POST['birthDate']) < $minAge) {
+            $error = urlencode("Le joueur doit avoir au moins $minAge ans");
+            header("Location: ../views/team_signup.php?player=$player&error=$error&nextable=$nextable");
+        } else {
+            $error = false;
+        }
     } else {
-        $error = false;
+        // le bouton next est d'office désactivé si l'utilisateur n'a absolument rien enregistré du joueur
+        header("Location: ../views/team_signup.php?player=$player&nextable=$nextable");
     }
 }
 

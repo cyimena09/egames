@@ -22,13 +22,12 @@ function createAdmin($admin) {
 function createPlayer($player, $teamID) {
     include('connection.php');
     $insertedId = null;
-    $query = "INSERT INTO players (firstName, lastName, email, password, pseudo, birthDate, FK_Team)
-            VALUES (:firstName, :lastName, :email, :password, :pseudo, :birthDate, :FK_Team)";
+    $query = "INSERT INTO players (firstName, lastName, email, pseudo, birthDate, FK_Team)
+            VALUES (:firstName, :lastName, :email, :pseudo, :birthDate, :FK_Team)";
     $query_params = array(
         ':firstName' => $player['firstName'],
         ':lastName' => $player['lastName'],
         ':email' => $player['email'],
-        ':password' => $player['password'],
         ':pseudo' => $player['pseudo'],
         ':birthDate' => $player['birthDate'],
         ':FK_Team' => $teamID);
@@ -43,7 +42,7 @@ function createPlayer($player, $teamID) {
 
 function insertPlayerTeam($playerID, $teamID, $gameID) {
     include('connection.php');
-    $query = "INSERT INTO players_teams (FK_Player, FK_Team, FK_Game)
+    $query = "INSERT INTO participations (FK_Player, FK_Team, FK_Game)
                 VALUES (:playerID, :teamID, :gameID)";
     $query_params = array(
         ':playerID' => $playerID,

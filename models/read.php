@@ -54,17 +54,32 @@ function getPlayer($id) {
         die("Failed query : " . $ex->getMessage());
     }
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    return $result;
+    return $result[0];
 }
 
-function getPlayersByTeam() {
-
+function getPlayersByTeamId($id) {
+    include("connection.php");
+    $query = "SELECT p.id, p.firstName, p.lastName, p.pseudo, p.birthDate, t.name as teamName FROM players p
+                INNER JOIN teams t ON t.id = p.FK_team 
+                WHERE p.FK_Team = :id ";
+    $query_params = array(':id'=> $id);
+    try{
+        $stmt = $db->prepare($query);
+        $result = $stmt->execute($query_params);
+    } catch(PDOException $ex) {
+        die("Failed query : " . $ex->getMessage());
+    }
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $result;
 }
 
 // TEAM FUNCTIONS
 function getTeams() {
     include("connection.php");
-    $query = "SELECT * FROM teams";
+    $query = "SELECT DISTINCT t.id, t.name as teamName, g.name as game
+                FROM teams t
+                INNER JOIN participations p ON p.FK_Team = t.id
+                INNER JOIN games g ON g.id = p.FK_Game";
     $query_params = array();
     try{
         $stmt = $db->prepare($query);
@@ -76,9 +91,25 @@ function getTeams() {
     return $result;
 }
 
-function getTeam() {
-
+function getTeamById($id) {
+    include("connection.php");
+    $query = "SELECT DISTINCT t.id, t.name as teamName, g.name as game
+                FROM teams t
+                INNER JOIN participations p ON p.FK_Team = t.id
+                INNER JOIN games g ON g.id = p.FK_Game
+                WHERE t.id = :id";
+    $query_params = array(':id'=> $id);
+    try{
+        $stmt = $db->prepare($query);
+        $result = $stmt->execute($query_params);
+    } catch(PDOException $ex) {
+        die("Failed query : " . $ex->getMessage());
+    }
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $result[0];
 }
+
+
 
 // GAME FUNCTIONS
 function getGames() {
