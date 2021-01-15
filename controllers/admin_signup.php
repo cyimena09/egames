@@ -1,5 +1,6 @@
 <?php
 include('../models/insert.php');
+include('../models/read.php');
 include("../toolbox/formsValidator.php");
 $admin = $_POST;
 $error = true;
@@ -16,9 +17,10 @@ if (checkEmptyArray($admin)) {
 } elseif ($admin['password'] != $admin['confirmPassword']) {
     $error = urlencode("Les mots de passe ne correspondent pas");
     header("Location: ../views/admin_signup.php?error=$error");
-}
-
-else {
+} elseif (!empty(getPlayerEmail($player['email']))) {
+    $error = urlencode("Un Administrateur avec cet email à déjà été enregistré !");
+    header("Location: ../views/admin_signup.php?error=$error");
+} else {
     $error = false;
 }
 

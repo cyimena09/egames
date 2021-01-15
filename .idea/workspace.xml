@@ -19,17 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd60d9c4-fcf6-44aa-ace5-12298c0ec422" name="Default Changelist" comment="add update and delete">
-      <change afterPath="$PROJECT_DIR$/toolbox/messenger.php" afterDir="false" />
+    <list default="true" id="bd60d9c4-fcf6-44aa-ace5-12298c0ec422" name="Default Changelist" comment="add messenger">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/admin_signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/admin_signup.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/solo_signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/solo_signup.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/team_signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/team_signup.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/style/css/formulaire.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/style/css/formulaire.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/read.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/read.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/admin_signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin_signup.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/player_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/player_update.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/solo_signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/solo_signup.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/solo_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/solo_update.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/team_signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/team_signup.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +57,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../RegisterApplication/register-application" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -86,7 +83,9 @@
       <workItem from="1610563642708" duration="3752000" />
       <workItem from="1610609739755" duration="777000" />
       <workItem from="1610620863288" duration="20763000" />
-      <workItem from="1610647352265" duration="11811000" />
+      <workItem from="1610647352265" duration="11964000" />
+      <workItem from="1610663804360" duration="694000" />
+      <workItem from="1610702241809" duration="10803000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1609967204145</created>
@@ -144,7 +143,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610656658184</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="add messenger">
+      <created>1610659303198</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1610659303198</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,7 +175,8 @@
     <MESSAGE value="add next and previous system" />
     <MESSAGE value="check forms" />
     <MESSAGE value="add update and delete" />
-    <option name="LAST_COMMIT_MESSAGE" value="add update and delete" />
+    <MESSAGE value="add messenger" />
+    <option name="LAST_COMMIT_MESSAGE" value="add messenger" />
   </component>
   <component name="WindowStateProjectService">
     <state x="667" y="163" key="#PHP" timestamp="1610398239395">

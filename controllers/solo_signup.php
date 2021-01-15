@@ -1,9 +1,14 @@
 <?php
+session_start();
 include("../models/insert.php");
+include("../models/read.php");
 include("../toolbox/formsValidator.php");
 include("../toolbox/messenger.php");
 $player = $_POST;
 $error = true;
+// on enregistre dans une session les données du joueur
+// pour eviter qu'il ne doivent recommencer l'encodage du formulaire en cas d'erreur
+$_SESSION['soloPlayer'] = $player;
 
 if(checkEmptyArray($player)) {
     $error = urlencode("veuillez remplir tous les champs");
@@ -16,6 +21,9 @@ if(checkEmptyArray($player)) {
     header("Location: ../views/solo_signup.php?error=$error");
 } elseif (getAgeFromDate($player['birthDate']) < $minAge) {
     $error = urlencode("Le joueur doit avoir au moins $minAge ans");
+    header("Location: ../views/solo_signup.php?error=$error");
+} elseif (!empty(getPlayerEmail($player['email']))) {
+    $error = urlencode("Un joueur avec cet email à déjà été enregistré !");
     header("Location: ../views/solo_signup.php?error=$error");
 } else {
     $error = false;

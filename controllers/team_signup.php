@@ -1,6 +1,7 @@
 <?php
 session_start();
 include("../models/insert.php");
+include("../models/read.php");
 include("../toolbox/formsValidator.php");
 include("../configuration.php");
 include("../toolbox/messenger.php");
@@ -10,7 +11,7 @@ if (isset($_GET['player'])){
 } else {
     $player = 0;
 }
-$newPlayer = $player + 1;
+$newPlayer = $player + 1; // les joueurs sont encodé 1 à 1, 'newPlayer' correspond au joueur suivant
 
 // --------------------------------------------------------------------------------------------------
 /* Opération d'insertion dans la base de donnée  de l'équipe et des joueurs */
@@ -22,6 +23,7 @@ checkTrimArray($_POST);
 // Si on arrive dans ce bloc de code c'est qu'on a fini d'encoder les joueurs
 // et qu'après avoir encodé l'équipe et le jeu l'inscription sera terminé.
 if(isset($_POST['game']) && isset($_POST['teamName'])) {
+
     $game = $_POST['game'];
     $teamName = $_POST['teamName'];
 
@@ -47,7 +49,7 @@ if(isset($_POST['game']) && isset($_POST['teamName'])) {
             // une fois l'inscription cloturé on détruit la session et on redirige
             session_destroy();
             header("Location: ../views/success_signup.php");
-            } else {
+        } else {
             $error = urlencode("L'inscription ne peut pas s'effectuer, vous avez dépassé le nombre de joueur maximum");
             header("Location: ../views/team_signup.php?player=$player&error=$error");
         }
@@ -59,7 +61,6 @@ if(isset($_POST['game']) && isset($_POST['teamName'])) {
 // --------------------------------------------------------------------------------------------------
 
 else {
-
     $nextable = false; // désactive le bouton next du formulaire
 
     if(!empty($_POST)) {
@@ -79,8 +80,25 @@ else {
         } elseif (getAgeFromDate($_POST['birthDate']) < $minAge) {
             $error = urlencode("Le joueur doit avoir au moins $minAge ans");
             header("Location: ../views/team_signup.php?player=$player&error=$error&nextable=$nextable");
+        } elseif (!empty(getPlayerEmail($_POST['email']))) {
+            $error = urlencode("Un joueur avec cet email à déjà été enregistré !");
+            header("Location: ../views/team_signup.php?player=$player&error=$error");
         } else {
-            $error = false;
+            // Une fois que les données sont dans un format correct, on vérifie que l'utilisateur n'a pas encodé
+            // deux fois la même addresse
+            $similitude = 0;
+            for ($i = 0; $i < count($_SESSION['players']); $i++){
+                if ($_POST['email'] == $_SESSION['players'][$i]['email'] && $i != $player) {
+                    $similitude++;
+                }
+            }
+            if ($similitude != 0) {
+                //var_dump( $_SESSION['players'][$i]);
+                $error = urlencode("Deux joueurs ne peuvent pas avoir la même adresse mail.");
+                header("Location: ../views/team_signup.php?player=$player&error=$error");
+            } else {
+                $error = false;
+            }
         }
     } else {
         // le bouton next est d'office désactivé si l'utilisateur n'a absolument rien enregistré du joueur
@@ -95,5 +113,5 @@ else {
 if ($error == false) {
     header("Location: ../views/team_signup.php?player=$newPlayer");
 } else {
-    echo "un problème est survenue"; // Normalement nous n'arrivons jamais ici puisque j'ai géré toutes les situations ;p
+    echo "un problème est survenu"; // Normalement nous n'arrivons jamais ici puisque j'ai géré toutes les situations ;p
 }

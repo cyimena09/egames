@@ -4,6 +4,7 @@ include("../templates/header.php");
 include("../templates/navbar.php");
 include("../models/read.php");
 include ("../configuration.php");
+
 $games = getGames();
 $previousPlayer = null;
 

@@ -2,10 +2,10 @@
 include("../templates/header.php");
 include("../templates/navbar.php");
 ?>
+
 <h2>Nouvel administrateur</h2>
 
 <div style="margin-left: 45%" >
-
     <form style="display: flex; flex-direction: column" action="../controllers/admin_signup.php" method="post">
         <label for="firstName">Prénom</label>
         <input id="firstName" type="text" name="firstName"/>
@@ -17,10 +17,10 @@ include("../templates/navbar.php");
         <input id="email" type="text" placeholder="Ajouter un email" name="email"/>
 
         <label for="password">Mot de passe</label>
-        <input id="password" type="password" name="password" placeholder="Attribuer un mot de passe"/>
+        <input id="password" type="password" name="password"/>
 
         <label for="confirmPassword">Confirmer le mot de passe</label>
-        <input id="confirmPassword" type="password" name="confirmPassword" placeholder="Confirmer le mot de passe">
+        <input id="confirmPassword" type="password" name="confirmPassword">
 
         <input type="submit" value="Enregistrer" />
     </form>
