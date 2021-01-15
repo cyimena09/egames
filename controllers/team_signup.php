@@ -14,16 +14,15 @@ if (isset($_GET['player'])){
 $newPlayer = $player + 1; // les joueurs sont encodé 1 à 1, 'newPlayer' correspond au joueur suivant
 
 // --------------------------------------------------------------------------------------------------
-/* Opération d'insertion dans la base de donnée  de l'équipe et des joueurs */
+/* Opération d'insertion dans la base de données  de l'équipe et des joueurs */
 // --------------------------------------------------------------------------------------------------
 
 $error = true;
 htmlSpecialArray($_POST);
 checkTrimArray($_POST);
 // Si on arrive dans ce bloc de code c'est qu'on a fini d'encoder les joueurs
-// et qu'après avoir encodé l'équipe et le jeu l'inscription sera terminé.
+// et qu'une fois l'équipe et le jeu encodé, l'inscription sera terminée.
 if(isset($_POST['game']) && isset($_POST['teamName'])) {
-
     $game = $_POST['game'];
     $teamName = $_POST['teamName'];
 
@@ -34,19 +33,19 @@ if(isset($_POST['game']) && isset($_POST['teamName'])) {
         $error = urlencode("Veuillez donner un nom d'équipe.");
         header("Location: ../views/team_signup.php?player=$player&error=$error");
     } else {
-        $teamId = createTeam($teamName); // La fonction createTeam retourne l'id de l'équipe insérée.
+        $teamId = createTeam($teamName); // On insert l'équipe dans la DB et on récupère son id qui est retourné par la fonction.
         $players = $_SESSION['players'];
         // Par sécurité on vérifie que le nombre de joueur pour l'équipe est respecté
-        // mais en principe si on arrive dans ce bloc de code c'est que c'est le cas => le formulaire qui mène à ce bloc
+        // mais si on arrive dans ce bloc de code c'est que c'est le cas => le formulaire qui mène à ce bloc
         // n'est accessible que si le nombre de joueur valide à été respecté.
-        if(count($_SESSION['players']) == $maxPlayer) {
+        if (count($_SESSION['players']) == $maxPlayer) {
             foreach ($players as $player) {
-                $playerId = createPlayer($player, $teamId); // On insert le joueur avec l'id de son équipe récupéré précédemment.
-                insertParticipation($playerId, $teamId, $game); // On insert l'id du joueur et de son équipe dans la table intermédiaire 'players_teams'.
+                $playerId = createPlayer($player, $teamId); // On insert le joueur et la clé étrangère de son équipe
+                insertParticipation($playerId, $teamId, $game); // On insert l'id du joueur et de son équipe dans la table 'participations'.
                 // On envoie un mail à chaque joueur pour confirmer leur inscription.
                 sendConfirmMail($player['email']);
             }
-            // une fois l'inscription cloturé on détruit la session et on redirige
+            // une fois l'inscription cloturé on détruit la session et on redirige vers une page de succès
             session_destroy();
             header("Location: ../views/success_signup.php");
         } else {

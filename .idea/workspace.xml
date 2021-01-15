@@ -19,15 +19,20 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd60d9c4-fcf6-44aa-ace5-12298c0ec422" name="Default Changelist" comment="add messenger">
+    <list default="true" id="bd60d9c4-fcf6-44aa-ace5-12298c0ec422" name="Default Changelist" comment="secure forms">
+      <change afterPath="$PROJECT_DIR$/views/all_players.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/game_details.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/game_list.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/admin_signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/admin_signup.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/solo_signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/solo_signup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configuration.php" beforeDir="false" afterPath="$PROJECT_DIR$/configuration.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/team_signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/team_signup.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/read.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/read.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/admin_signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin_signup.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/solo_signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/solo_signup.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/team_signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/team_signup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/navbar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/admin_space.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin_space.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/solo_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/solo_list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/team_details.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/team_details.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/team_or_solo.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/team_or_solo.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +90,8 @@
       <workItem from="1610620863288" duration="20763000" />
       <workItem from="1610647352265" duration="11964000" />
       <workItem from="1610663804360" duration="694000" />
-      <workItem from="1610702241809" duration="10803000" />
+      <workItem from="1610702241809" duration="12674000" />
+      <workItem from="1610716962596" duration="1870000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1609967204145</created>
@@ -150,7 +156,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610659303198</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="secure forms">
+      <created>1610715000474</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1610715000474</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,7 +189,8 @@
     <MESSAGE value="check forms" />
     <MESSAGE value="add update and delete" />
     <MESSAGE value="add messenger" />
-    <option name="LAST_COMMIT_MESSAGE" value="add messenger" />
+    <MESSAGE value="secure forms" />
+    <option name="LAST_COMMIT_MESSAGE" value="secure forms" />
   </component>
   <component name="WindowStateProjectService">
     <state x="667" y="163" key="#PHP" timestamp="1610398239395">
@@ -187,6 +201,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610398234145" />
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1610716455641">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610716455641" />
     <state x="740" y="261" key="FileChooserDialogImpl" timestamp="1610657743787">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -200,14 +218,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="632" y="225" key="Github.UntrackedFilesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1609966979341" />
-    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1610657769836">
+    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1610718560995">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610657769836" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1610656676679">
+    <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610718560995" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1610715016297">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610656676679" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610715016297" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1610647857183">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

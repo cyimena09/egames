@@ -33,7 +33,9 @@ function getAdminByEmail($email) {
 // PLAYER FUNCTIONS
 function getPlayers() {
     include("connection.php");
-    $query = "SELECT * FROM players";
+    $query = "SELECT p.id, p.firstName, p.lastName, p.email, p.pseudo, g.name as gameName FROM players p
+                INNER JOIN participations pa ON p.id = pa.FK_Player
+                 INNER JOIN games g on g.id = pa.FK_Game";
     $query_params = array();
 
     try {
@@ -165,6 +167,42 @@ function getGames() {
     }
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
     return $result;
+}
+
+function getPlayersByGameId($id){
+    include("connection.php");
+    $query = "SELECT p.id, p.firstName, p.lastName, p.pseudo, p.birthDate
+                FROM players p
+                INNER JOIN participations pa ON pa.FK_Player = p.id
+                INNER JOIN games g ON g.id = pa.FK_Game
+                WHERE g.id = :id";
+    $query_params = array(':id'=> $id);
+
+    try {
+        $stmt = $db->prepare($query);
+        $result = $stmt->execute($query_params);
+    } catch(PDOException $ex) {
+        die("Failed query : " . $ex->getMessage());
+    }
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $result;
+}
+
+function getGameById($id){
+    include("connection.php");
+    $query = "SELECT *
+                FROM games g
+                WHERE g.id = :id";
+    $query_params = array(':id'=> $id);
+
+    try {
+        $stmt = $db->prepare($query);
+        $result = $stmt->execute($query_params);
+    } catch(PDOException $ex) {
+        die("Failed query : " . $ex->getMessage());
+    }
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $result[0];
 }
 
 // CHECK FUNCTIONS

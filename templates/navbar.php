@@ -11,10 +11,6 @@
                 <a href="admin_log.php" class="header__navbar--menu--link">Administrateur</a>
                 <a href="team_or_solo.php" class="header__navbar--menu--link">Joueur</a>
             </div>
-            <!--
-                <div class="header__navbar--toggle">
-                    <span class="header__navbar--toggle-icons"></span>
-                </div> -->
         </div>
         <div class="header__slogan">
             <h2 class="header__slogan--title">Tournoi E-Games</h2>

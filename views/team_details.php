@@ -36,7 +36,6 @@ $i=0;
             <td><?php echo $player['birthDate'];?></td>
             <td><a class="btn btn-warning" href="../views/player_update.php?id=<?php echo $player['id'];?>">Modifier</a>
             </td>
-
         </tr>
     <?php }?>
         </tbody>
