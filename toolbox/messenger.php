@@ -1,6 +1,6 @@
 <?php
 
-function sendConfirmMail($dest){
+function sendConfirmMail($dest) {
     $sujet = "Inscription E-Games";
     $headers = "From: Équipe E-Games";
     $message = "

@@ -25,7 +25,7 @@ $i=0;
                 <td><?php echo $player['pseudo'];?></td>
                 <td><?php echo $player['game'];?></td>
                 <td><a class="btn btn-warning" href="solo_update.php?id=<?php echo $player['id'];?>">Modifier</a>
-                    <a class="btn btn-danger" href="../controllers/solo_delete.php?id=<?php echo $player['id'];?>">Supprimer</a>
+                    <a class="btn btn-danger" href="../controllers/solo/solo_delete.php?id=<?php echo $player['id'];?>">Supprimer</a>
                 </td>
             </tr>
         <?php }?>

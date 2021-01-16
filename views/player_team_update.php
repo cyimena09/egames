@@ -4,11 +4,12 @@ include("../templates/header.php");
 include("../templates/navbar.php");
 if(isset($_GET)){
     $player = getPlayer($_GET['id']);
+    $teamId = $_GET['teamId'];
 }
 ?>
 <h2>Modifier un joueur</h2>
 <div style="margin-left: 40%">
-    <form style="display: flex; flex-direction: column" id="formulaire-inside" action="../controllers/player_update.php?teamId=<?php echo $player['FK_Team'] ?>&playerId=<?php echo $player['id'] ?>" method="POST">
+    <form style="display: flex; flex-direction: column" id="formulaire-inside" action="../controllers/team/player_team_update.php?teamId=<?php echo $player['FK_Team'] ?>&playerId=<?php echo $player['id'] ?>" method="POST">
 
         <label for="firstName">Prénom</label>
         <input type="text" name="firstName" id="firstName" value="<?php echo $player['firstName'];?>">
@@ -29,6 +30,7 @@ if(isset($_GET)){
 
         <input type="submit" id="add" value="Enregistrer">
     </form>
+    <a href="team_details.php?id=<?php echo $teamId?>">Retour</a>
 </div>
 
 <?php

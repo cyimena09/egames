@@ -3,7 +3,7 @@ session_start();
 include("../templates/header.php");
 include("../templates/navbar.php");
 include("../models/read.php");
-include ("../configuration.php");
+include("../configuration.php");
 
 $games = getGames();
 $previousPlayer = null;
@@ -35,7 +35,7 @@ if(isset($_SESSION['players'])){
     <div class="box_form">
         <h2>Formulaire pour équipe</h2>
         <div class="formulaire">
-            <form style="display: flex; flex-direction: column; align-items: center" id="formulaire-inside" action="../controllers/team_signup.php?player=<?php echo $player?>" method="POST">
+            <form style="display: flex; flex-direction: column; align-items: center" id="formulaire-inside" action="../controllers/team/team_signup.php?player=<?php echo $player?>" method="POST">
 
                 <?php if ($player < $maxPlayer) { ?>
                     <br>
@@ -86,7 +86,7 @@ if(isset($_SESSION['players'])){
 
             <?php if ($player > 0) { ?><a href="team_signup.php?player=<?php echo $player - 1 ?>">Précédent</a><?php }?>
 
-            <?php if ($player < $nbRegisteredPlayer && $player < $maxPlayer && $nextable) { ?><a href="../controllers/team_signup.php?player=<?php echo $player + 1 ?>">Suivant</a><?php }?>
+            <?php if ($player < $nbRegisteredPlayer && $player < $maxPlayer && $nextable) { ?><a href="../controllers/team/team_signup.php?player=<?php echo $player + 1 ?>">Suivant</a><?php }?>
         </div>
     </div>
 </div>

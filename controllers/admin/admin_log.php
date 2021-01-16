@@ -1,11 +1,11 @@
 <?php
-include('../models/read.php');
-include('../toolbox/authentication.php');
-include('../toolbox/formsValidator.php');
+include('../../models/read.php');
+include('../../toolbox/authentication.php');
+include('../../toolbox/formsValidator.php');
 
 if (checkEmptyArray($_POST)) {
     $error = urlencode("Veuillez compléter tous les champs.");
-    header("Location: ../views/admin_log.php?error=$error");
+    header("Location: ../../views/admin_log.php?error=$error");
 } else {
     $logger = getAdminByEmail($_POST['email']); // retourne (s'il existe) un email et un mot de passe correspondant à l'email en paramètre
     $error = null;
@@ -17,10 +17,10 @@ if (checkEmptyArray($_POST)) {
 
         if ($error == 'ok') { // si si les emails et les mots de passe concordent error vaut 'ok'
             // => accès à l'espace admin
-            header("Location: ../views/admin_space.php");
+            header("Location: ../../views/admin_space.php");
         } else {
             // on retourne au formulaire d'accès
-            header("Location: ../views/admin_log.php?error=$error");
+            header("Location: ../../views/admin_log.php?error=$error");
         }
     }
 }

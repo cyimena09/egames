@@ -9,7 +9,7 @@ if(isset($_GET)){
 ?>
 
 <div style="margin-left: 40%">
-    <form style="display: flex; flex-direction: column" id="formulaire-inside" action="../controllers/team_update.php?teamId=<?php echo $team['id'] ?>" method="POST">
+    <form style="display: flex; flex-direction: column" id="formulaire-inside" action="../controllers/team/team_update.php?teamId=<?php echo $team['id'] ?>" method="POST">
         <!--                CHOIX DE L'EQUIPE ET DU JEU-->
             <label for="teamName">Nom de l'équipe</label>
             <input type="text" name="teamName" id="teamName" value="<?php echo $team['teamName']; ?>">
@@ -25,6 +25,7 @@ if(isset($_GET)){
         <!--                FIN DE L'EQUIPE ET DU JEU-->
         <input type="submit" id="add" value="Enregistrer">
     </form>
+
 </div>
 
 <?php

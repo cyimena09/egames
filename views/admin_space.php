@@ -3,7 +3,7 @@ include("../models/read.php");
 include("../templates/header.php");
 include("../templates/navbar.php"); ?>
 
-<a style="margin-left: 25%" href="../views/admin_signup.php">Ajouter un administrateur</a>
+<a style="margin-left: 25%" href="admin_signup.php">Ajouter un administrateur</a>
 
 <?php
 include("../views/game_list.php");

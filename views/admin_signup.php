@@ -6,7 +6,7 @@ include("../templates/navbar.php");
 <h2>Nouvel administrateur</h2>
 
 <div style="margin-left: 45%" >
-    <form style="display: flex; flex-direction: column" action="../controllers/admin_signup.php" method="post">
+    <form style="display: flex; flex-direction: column" action="../controllers/admin/admin_signup.php" method="post">
         <label for="firstName">Prénom</label>
         <input id="firstName" type="text" name="firstName"/>
 

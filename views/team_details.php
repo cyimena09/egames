@@ -11,8 +11,7 @@ $i=0;
 
 <h2>Equipe : " <?php echo $team['teamName']; ?> "</h2>
 <h2>Jeu : " <?php echo $team['game']; ?> "</h2>
-
-<a style="margin-left: 25%" href="../views/team_update.php?id=<?php echo $team['id'];?>">Modifier le nom de l'équipe ou le jeu</a>
+<a style="margin-left: 25%" href="team_update.php?id=<?php echo $team['id'];?>">Modifier le nom de l'équipe ou le jeu</a>
 <div style="margin-left: 25%">
     <table class="table table-dark col-8">
         <thead>
@@ -34,13 +33,13 @@ $i=0;
             <td><?php echo $player['lastName'];?></td>
             <td><?php echo $player['pseudo'];?></td>
             <td><?php echo $player['birthDate'];?></td>
-            <td><a class="btn btn-warning" href="../views/player_update.php?id=<?php echo $player['id'];?>">Modifier</a>
+            <td><a class="btn btn-warning" href="player_team_update.php?teamId=<?php echo $team['id'];?>&id=<?php echo $player['id'];?>">Modifier</a>
             </td>
         </tr>
     <?php }?>
         </tbody>
     </table>
 </div>
-    <a style="margin-left: 25%" href="../views/admin_space.php">Retour</a>
+    <a style="margin-left: 25%" href="admin_space.php">Retour</a>
 
 <?php include("../templates/footer.php");

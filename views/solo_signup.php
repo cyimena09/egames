@@ -10,7 +10,7 @@ $games = getGames();
     <div class="box_form">
         <h2>Formulaire pour Solo</h2>
         <div class="formulaire">
-            <form style="display: flex; flex-direction: column; align-items: center" id="formulaire-inside" action="../controllers/solo_signup.php" method="POST">
+            <form style="display: flex; flex-direction: column; align-items: center" id="formulaire-inside" action="../controllers/solo/solo_signup.php" method="POST">
 
                 <label for="firstName">Prénom</label>
                 <input type="text" name="firstName" id="firstName"

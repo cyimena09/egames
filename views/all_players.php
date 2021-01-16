@@ -12,10 +12,10 @@ $i=0;
             <th scope="col">Prénom</th>
             <th scope="col">Nom</th>
             <th scope="col">Pseudo</th>
+            <th scope="col">Age</th>
             <th scope="col">Email</th>
+            <th scope="col">Équipe</th>
             <th scope="col">Jeu</th>
-
-            <th scope="col">Actions</th>
         </tr>
         </thead>
         <tbody>
@@ -25,10 +25,10 @@ $i=0;
                 <td><?php echo $player['firstName'];?></td>
                 <td><?php echo $player['lastName'];?></td>
                 <td><?php echo $player['pseudo'];?></td>
+                <td><?php echo $player['age'];?></td>
                 <td><?php echo $player['email'];?></td>
+                <td><?php echo $player['teamName'];?></td>
                 <td><?php echo $player['gameName'];?></td>
-                <td><a class="btn btn-warning" href="solo_update.php?id=<?php echo $player['id'];?>">Modifier</a>
-                    <a class="btn btn-danger" href="../controllers/solo_delete.php?id=<?php echo $player['id'];?>">Supprimer</a>
                 </td>
             </tr>
         <?php }?>

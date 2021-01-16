@@ -22,7 +22,7 @@ $i=0;
                 <td><?php echo $team['teamName'];?></td>
                 <td><?php echo $team['game'];?></td>
                 <td><a class="btn btn-warning" href="team_details.php?id=<?php echo $team['id'];?>">Détails</a>
-                    <a class="btn btn-danger" href="../controllers/team_delete.php?id=<?php echo $team['id'];?>">Supprimer</a>
+                    <a class="btn btn-danger" href="../controllers/team/team_delete.php?id=<?php echo $team['id'];?>">Supprimer</a>
                 </td>
             </tr>
         <?php }?>
