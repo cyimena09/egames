@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bd60d9c4-fcf6-44aa-ace5-12298c0ec422" name="Default Changelist" comment="change &quot;id&quot; by &quot;tableName_id&quot; and refactoring">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/admin/admin_signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/admin/admin_signup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/solo/solo_signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/solo/solo_signup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/read.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/read.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/style/js/options.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/forms.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/admin_signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin_signup.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
+  <component name="ProjectId" id="1miCFcSFM32AW6uZStmTAmm5Zgl" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../ClassRoom Js/classRoom" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\cyime\OneDrive\Bureau\IFOSUP\Bac 2\Projet de développement web\Egames\egames\resources\js" />
+      <recent name="C:\Users\cyime\OneDrive\Bureau\IFOSUP\Bac 2\Projet de développement web\Egames\egames\resources" />
+      <recent name="C:\Users\cyime\OneDrive\Bureau\IFOSUP\Bac 2\Projet de développement web\Egames\egames\views" />
+      <recent name="C:\Users\cyime\OneDrive\Bureau\IFOSUP\Bac 2\Projet de développement web\Egames\egames\views\success" />
+      <recent name="C:\Users\cyime\OneDrive\Bureau\IFOSUP\Bac 2\Projet de développement web\Egames\egames\views\team" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bd60d9c4-fcf6-44aa-ace5-12298c0ec422" name="Default Changelist" comment="" />
+      <created>1609966922805</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1609966922805</updated>
+      <workItem from="1609966925080" duration="287000" />
+      <workItem from="1610309470809" duration="185000" />
+      <workItem from="1610397946670" duration="8024000" />
+      <workItem from="1610446248514" duration="13355000" />
+      <workItem from="1610461918331" duration="4414000" />
+      <workItem from="1610478006162" duration="9604000" />
+      <workItem from="1610530511125" duration="13357000" />
+      <workItem from="1610563642708" duration="3752000" />
+      <workItem from="1610609739755" duration="777000" />
+      <workItem from="1610620863288" duration="20763000" />
+      <workItem from="1610647352265" duration="11964000" />
+      <workItem from="1610663804360" duration="694000" />
+      <workItem from="1610702241809" duration="12674000" />
+      <workItem from="1610716962596" duration="2206000" />
+      <workItem from="1610820278565" duration="8559000" />
+      <workItem from="1610833227278" duration="4681000" />
+      <workItem from="1610875753267" duration="631000" />
+      <workItem from="1610879570019" duration="12552000" />
+      <workItem from="1610892480899" duration="97000" />
+      <workItem from="1610892757078" duration="5405000" />
+    </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <created>1609967204145</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1609967204145</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add views and start controllers development">
+      <created>1610406382336</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1610406382336</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add admin account and team register">
+      <created>1610458666698</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1610458666698</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add admin account and team register">
+      <created>1610459710160</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1610459710160</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add next and previous system">
+      <created>1610487733207</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1610487733207</updated>
+    </task>
+    <task id="LOCAL-00006" summary="check forms">
+      <created>1610543999044</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1610543999044</updated>
+    </task>
+    <task id="LOCAL-00007" summary="add update and delete">
+      <created>1610643079693</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1610643079693</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add update and delete">
+      <created>1610656658184</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1610656658184</updated>
+    </task>
+    <task id="LOCAL-00009" summary="add messenger">
+      <created>1610659303198</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1610659303198</updated>
+    </task>
+    <task id="LOCAL-00010" summary="secure forms">
+      <created>1610715000474</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1610715000474</updated>
+    </task>
+    <task id="LOCAL-00011" summary="finalization">
+      <created>1610719055330</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1610719055330</updated>
+    </task>
+    <task id="LOCAL-00012" summary="improve user interface">
+      <created>1610832658109</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1610832658109</updated>
+    </task>
+    <task id="LOCAL-00013" summary="change &quot;id&quot; by &quot;tableName_id&quot; and refactoring">
+      <created>1610892537404</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1610892537404</updated>
+    </task>
+    <task id="LOCAL-00014" summary="change &quot;id&quot; by &quot;tableName_id&quot; and refactoring">
+      <created>1610892836257</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1610892836257</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit" />
+    <MESSAGE value="add views and start controllers development" />
+    <MESSAGE value="add admin account and team register" />
+    <MESSAGE value="add next and previous system" />
+    <MESSAGE value="check forms" />
+    <MESSAGE value="add update and delete" />
+    <MESSAGE value="add messenger" />
+    <MESSAGE value="secure forms" />
+    <MESSAGE value="finalization" />
+    <MESSAGE value="improve user interface" />
+    <MESSAGE value="change &quot;id&quot; by &quot;tableName_id&quot; and refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="change &quot;id&quot; by &quot;tableName_id&quot; and refactoring" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="667" y="163" key="#PHP" timestamp="1610398239395">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="667" y="163" key="#PHP/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610398239395" />
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1610398234145">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610398234145" />
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1610896382972">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610896382972" />
+    <state x="740" y="261" key="FileChooserDialogImpl" timestamp="1610892944907">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610892944907" />
+    <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1610875790182" />
+    <state x="838" y="418" key="Github.ShareDialog" timestamp="1609966969200">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="838" y="418" key="Github.ShareDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1609966969200" />
+    <state x="632" y="225" key="Github.UntrackedFilesDialog" timestamp="1609966979341">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="632" y="225" key="Github.UntrackedFilesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1609966979341" />
+    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1610893763034">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610893763034" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1610892843558">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610892843558" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1610896959775">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610896959775" />
+  </component>
+</project>

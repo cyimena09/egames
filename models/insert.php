@@ -2,13 +2,12 @@
 // ADMIN FUNCTIONS
 function createAdmin($admin) {
     include('connection.php');
-    $insertedId = null;
-    $query = "INSERT INTO admins (firstName, lastName, birthDate, email, password)
-            VALUES (:firstName, :lastName, :birthDate, :email, :password)";
+    $admin['password'] = password_hash($admin['password'], PASSWORD_DEFAULT);
+    $query = "INSERT INTO admins (firstName, lastName, email, password)
+                VALUES (:firstName, :lastName, :email, :password)";
     $query_params = array(
         ':firstName' => $admin['firstName'],
         ':lastName' => $admin['lastName'],
-        ':birthDate' => $admin['email'],
         ':email' => $admin['email'],
         ':password' => $admin['password']);
     try {
@@ -23,27 +22,27 @@ function createAdmin($admin) {
 function createPlayer($player, $teamID) {
     include('connection.php');
     $insertedId = null;
-    $query = "INSERT INTO players (firstName, lastName, email, password, pseudo, birthDate, FK_Team)
-            VALUES (:firstName, :lastName, :email, :password, :pseudo, :birthDate, :FK_Team)";
+    $query = "INSERT INTO players (firstName, lastName, email, pseudo, birthDate, FK_Team)
+                VALUES (:firstName, :lastName, :email, :pseudo, :birthDate, :FK_Team)";
     $query_params = array(
         ':firstName' => $player['firstName'],
         ':lastName' => $player['lastName'],
         ':email' => $player['email'],
-        ':password' => $player['password'],
         ':pseudo' => $player['pseudo'],
         ':birthDate' => $player['birthDate'],
         ':FK_Team' => $teamID);
     try {
         $stmt = $db->prepare($query);
         $result = $stmt->execute($query_params);
+        return $insertedId = $db->lastInsertId(); // on récupère l'id du joueur créé
     } catch(PDOException $ex) {
         die("Failed query : " . $ex->getMessage());
     }
 }
 
-function insertPlayerTeam($playerID, $teamID, $gameID) {
+function insertParticipation($playerID, $teamID, $gameID) {
     include('connection.php');
-    $query = "INSERT INTO players_teams (FK_Player, FK_Team, FK_Game)
+    $query = "INSERT INTO participations (FK_Player, FK_Team, FK_Game)
                 VALUES (:playerID, :teamID, :gameID)";
     $query_params = array(
         ':playerID' => $playerID,
@@ -67,6 +66,7 @@ function createTeam($name) {
     try {
         $stmt = $db->prepare($query);
         $result = $stmt->execute($query_params);
+        return $insertedId = $db->lastInsertId();
     } catch(PDOException $ex) {
         die("Failed query : " . $ex->getMessage());
     }

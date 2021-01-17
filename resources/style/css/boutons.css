@@ -1,0 +1,30 @@
+.container__options input{
+    margin-right: 20px;
+    text-align: center; 
+}
+
+.boutons__options{
+    width: 100%;
+    height: 300px;
+    position: relative;
+    text-align: center;
+}
+
+.container__options{
+    width : 100%;
+    height: 100%;
+    margin : auto;
+    position : relative;
+    top : 40%;
+}
+
+input{
+    width: 20%;
+    height: 50%;
+    border: 2px solid black;
+}
+
+input:hover{
+    background:black;
+    color: white;
+}
