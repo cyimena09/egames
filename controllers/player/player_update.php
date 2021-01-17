@@ -41,7 +41,7 @@ if (checkEmptyArray($player)) {
 // S'il n'y a pas d'erreur on traite le cas ou le joueur est seul ET le cas ou il est en équipe.
 if ($error == false) {
     // 1. S'il est seul
-    if (!empty($player['gameId'])) { // On sait qu'un joueur est seul si on récupère l'id du jeu (car un uniquement joueur seul (ou une équipe) peut changer de jeu).
+    if (!empty($player['gameId'])) { // On sait qu'un joueur est seul si on récupère l'id du jeu (car uniquement un joueur seul (ou une équipe) peut changer de jeu).
         updatePlayer($playerId, $player);
         updateParticipationByPlayerId($player['gameId'], $playerId);
         header("Location: ../../views/$previousPage.php?game_id=$gameId&team_id=$teamId");
