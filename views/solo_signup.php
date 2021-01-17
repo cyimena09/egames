@@ -14,35 +14,35 @@ $games = getGames();
 
                 <label for="firstName">Prénom</label>
                 <input type="text" name="firstName" id="firstName"
-                    <?php if (isset($_SESSION['soloPlayer'])) { ?> value="<?php echo $_SESSION['soloPlayer']['firstName'];?>" <?php }?> >
+                    <?php if (isset($_SESSION['soloPlayer'])) { ?> value="<?php echo $_SESSION['soloPlayer']['firstName']; ?>" <?php }?> >
 
                 <label for="lastName">Nom</label>
                 <input type="text" name="lastName" id="lastName"
-                    <?php if (isset($_SESSION['soloPlayer'])) { ?> value="<?php echo $_SESSION['soloPlayer']['lastName'];?>" <?php }?>>
+                    <?php if (isset($_SESSION['soloPlayer'])) { ?> value="<?php echo $_SESSION['soloPlayer']['lastName']; ?>" <?php }?>>
 
                 <label for="birthDate">Date de naissance</label>
                 <input type="date" name="birthDate" id="birthDate"
-                    <?php if (isset($_SESSION['soloPlayer'])) { ?> value="<?php echo $_SESSION['soloPlayer']['birthDate'];?>" <?php }?>>
+                    <?php if (isset($_SESSION['soloPlayer'])) { ?> value="<?php echo $_SESSION['soloPlayer']['birthDate']; ?>" <?php }?>>
 
                 <label for="email">E-mail</label>
                 <input type="email" name="email" id="email"
-                    <?php if (isset($_SESSION['soloPlayer'])) { ?> value="<?php echo $_SESSION['soloPlayer']['email'];?>" <?php }?>>
+                    <?php if (isset($_SESSION['soloPlayer'])) { ?> value="<?php echo $_SESSION['soloPlayer']['email']; ?>" <?php }?>>
 
                 <label for="pseudo">Pseudo</label>
                 <input type="text" name="pseudo" id="pseudo"
-                    <?php if (isset($_SESSION['soloPlayer'])) { ?> value="<?php echo $_SESSION['soloPlayer']['pseudo'];?>" <?php }?>>
+                    <?php if (isset($_SESSION['soloPlayer'])) { ?> value="<?php echo $_SESSION['soloPlayer']['pseudo']; ?>" <?php }?>>
 
                 <label for="game">Jeu</label>
                 <select name="game" id="game">
-                    <?php foreach ($games as $game){ ?>
-                        <option value="<?php echo $game['id']; ?>"><?php echo $game['name'];?></option>
+                    <?php foreach ($games as $game) { ?>
+                        <option value="<?php echo $game['id']; ?>"><?php echo $game['name']; ?></option>
                     <?php }?>
                 </select>
 
                 <input type="submit" value="Envoyer">
             </form>
 
-            <p style="color: red"><?php if(isset($_GET['error'])){echo $_GET['error'];} ?></p>
+            <p style="color: red"><?php if (isset($_GET['error'])) { echo $_GET['error']; } ?></p>
 
         </div>
     </div>

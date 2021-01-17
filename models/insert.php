@@ -4,7 +4,7 @@ function createAdmin($admin) {
     include('connection.php');
     $admin['password'] = password_hash($admin['password'], PASSWORD_DEFAULT);
     $query = "INSERT INTO admins (firstName, lastName, email, password)
-            VALUES (:firstName, :lastName, :email, :password)";
+                VALUES (:firstName, :lastName, :email, :password)";
     $query_params = array(
         ':firstName' => $admin['firstName'],
         ':lastName' => $admin['lastName'],
@@ -23,7 +23,7 @@ function createPlayer($player, $teamID) {
     include('connection.php');
     $insertedId = null;
     $query = "INSERT INTO players (firstName, lastName, email, pseudo, birthDate, FK_Team)
-            VALUES (:firstName, :lastName, :email, :pseudo, :birthDate, :FK_Team)";
+                VALUES (:firstName, :lastName, :email, :pseudo, :birthDate, :FK_Team)";
     $query_params = array(
         ':firstName' => $player['firstName'],
         ':lastName' => $player['lastName'],

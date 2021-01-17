@@ -19,13 +19,14 @@ $i=0;
 
         <?php foreach ($games as $game) { $i++ ?>
             <tr>
-                <th scope="row"><?php echo $i;?></th>
-                <td><?php echo $game['name'];?></td>
-                <td><?php echo $game['nbPlayer'];?></td>
-                <td><a class="btn btn-warning" href="game_details.php?id=<?php echo $game['id'];?>">Voir les participants</a>
+                <th scope="row"><?php echo $i; ?></th>
+                <td><?php echo $game['name']; ?></td>
+                <td><?php echo $game['nbPlayer']; ?></td>
+                <td><a class="btn btn-warning" href="game_details.php?game_id=<?php echo $game['id']; ?>">Voir les participants</a>
                 </td>
             </tr>
         <?php }?>
+
         </tbody>
     </table>
 </div>

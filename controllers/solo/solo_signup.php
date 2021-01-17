@@ -31,7 +31,7 @@ if(checkEmptyArray($player)) {
     $error = false;
 }
 
-if($error == false) {
+if ($error == false) {
     $playerId = createPlayer($player, null);
     insertParticipation($playerId, null, $player['game']);
 
@@ -40,8 +40,6 @@ if($error == false) {
         session_destroy();
         header("Location: ../../views/success_signup.php");
     } else {
-        var_dump($player);
-
-        echo "Une erreur est survenue";
+        echo "Une erreur est survenue. Impossible d'envoyer le mail de confirmation.";
     }
 }

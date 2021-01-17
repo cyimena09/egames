@@ -112,5 +112,5 @@ else {
 if ($error == false) {
     header("Location: ../../views/team_signup.php?player=$newPlayer");
 } else {
-    echo "un problème est survenu"; // Normalement nous n'arrivons jamais ici puisque j'ai géré toutes les situations ;p
+    echo "un problème est survenu"; // Normalement nous n'arrivons jamais ici puisque nous avons géré toutes les situations ;p
 }

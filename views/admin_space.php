@@ -11,3 +11,4 @@ include("../views/team_list.php");
 include("../views/solo_list.php");
 include("../views/all_players.php");
 include("../templates/footer.php");
+?>

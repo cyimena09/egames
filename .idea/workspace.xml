@@ -19,32 +19,33 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd60d9c4-fcf6-44aa-ace5-12298c0ec422" name="Default Changelist" comment="finalization">
-      <change afterPath="$PROJECT_DIR$/controllers/game/game_add.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/game_add.php" afterDir="false" />
+    <list default="true" id="bd60d9c4-fcf6-44aa-ace5-12298c0ec422" name="Default Changelist" comment="improve user interface">
+      <change afterPath="$PROJECT_DIR$/controllers/player/player_update.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/player_update.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/admin_log.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/admin/admin_log.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/admin_signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/admin/admin_signup.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/player_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/team/player_team_update.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/solo_delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/solo/solo_delete.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/solo_signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/solo/solo_signup.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/solo_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/solo/solo_update.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/team_delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/team/team_delete.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/team_signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/team/team_signup.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/team_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/team/team_update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/admin/admin_signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/admin/admin_signup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/game/game_add.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/game/game_add.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/solo/solo_delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/solo/solo_delete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/solo/solo_signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/solo/solo_signup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/solo/solo_update.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/team/player_team_update.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/team/team_delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/team/team_delete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/team/team_signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/team/team_signup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/team/team_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/team/team_update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/insert.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/insert.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/read.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/read.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/style/css/formulaire.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/style/css/formulaire.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toolbox/messenger.php" beforeDir="false" afterPath="$PROJECT_DIR$/toolbox/messenger.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/admin_log.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin_log.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/admin_signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin_signup.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/admin_space.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin_space.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/all_players.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/all_players.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/game_add.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/game_add.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/game_details.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/game_details.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/game_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/game_list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/player_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/player_team_update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/player_team_update.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/views/solo_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/solo_list.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/solo_signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/solo_signup.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/solo_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/solo_update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/solo_update.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/success_admin_signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/success_admin_signup.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/team_details.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/team_details.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/team_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/team_list.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/team_signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/team_signup.php" afterDir="false" />
@@ -112,7 +113,10 @@
       <workItem from="1610663804360" duration="694000" />
       <workItem from="1610702241809" duration="12674000" />
       <workItem from="1610716962596" duration="2206000" />
-      <workItem from="1610820278565" duration="8297000" />
+      <workItem from="1610820278565" duration="8559000" />
+      <workItem from="1610833227278" duration="4681000" />
+      <workItem from="1610875753267" duration="631000" />
+      <workItem from="1610879570019" duration="12552000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1609967204145</created>
@@ -191,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610719055330</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="improve user interface">
+      <created>1610832658109</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1610832658109</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,7 +230,8 @@
     <MESSAGE value="add messenger" />
     <MESSAGE value="secure forms" />
     <MESSAGE value="finalization" />
-    <option name="LAST_COMMIT_MESSAGE" value="finalization" />
+    <MESSAGE value="improve user interface" />
+    <option name="LAST_COMMIT_MESSAGE" value="improve user interface" />
   </component>
   <component name="WindowStateProjectService">
     <state x="667" y="163" key="#PHP" timestamp="1610398239395">
@@ -230,15 +242,15 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610398234145" />
-    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1610716455641">
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1610885451621">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610716455641" />
-    <state x="740" y="261" key="FileChooserDialogImpl" timestamp="1610820332830">
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610885451621" />
+    <state x="740" y="261" key="FileChooserDialogImpl" timestamp="1610892265086">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610657743787" />
-    <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1610820332830" />
+    <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610892265086" />
+    <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1610875790182" />
     <state x="838" y="418" key="Github.ShareDialog" timestamp="1609966969200">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -247,14 +259,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="632" y="225" key="Github.UntrackedFilesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1609966979341" />
-    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1610829769346">
+    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1610880663817">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610829769346" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1610715016297">
+    <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610880663817" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1610832665114">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610715016297" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610832665114" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1610647857183">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

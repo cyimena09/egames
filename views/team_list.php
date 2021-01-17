@@ -18,14 +18,15 @@ $i=0;
 
         <?php foreach ($teams as $team) { $i++ ?>
             <tr>
-                <th scope="row"><?php echo $i;?></th>
-                <td><?php echo $team['teamName'];?></td>
-                <td><?php echo $team['game'];?></td>
-                <td><a class="btn btn-warning" href="team_details.php?id=<?php echo $team['id'];?>">Détails</a>
-                    <a class="btn btn-danger" href="../controllers/team/team_delete.php?id=<?php echo $team['id'];?>">Supprimer</a>
+                <th scope="row"><?php echo $i; ?></th>
+                <td><?php echo $team['teamName']; ?></td>
+                <td><?php echo $team['game']; ?></td>
+                <td><a class="btn btn-warning" href="team_details.php?team_id=<?php echo $team['id']; ?>">Détails</a>
+                    <a class="btn btn-danger" href="../controllers/team/team_delete.php?team_id=<?php echo $team['id']; ?>">Supprimer</a>
                 </td>
             </tr>
         <?php }?>
+
         </tbody>
     </table>
 </div>
