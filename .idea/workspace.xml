@@ -19,7 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd60d9c4-fcf6-44aa-ace5-12298c0ec422" name="Default Changelist" comment="change &quot;id&quot; by &quot;tableName_id&quot; and refactoring" />
+    <list default="true" id="bd60d9c4-fcf6-44aa-ace5-12298c0ec422" name="Default Changelist" comment="change &quot;id&quot; by &quot;tableName_id&quot; and refactoring">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/admin/admin_signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/admin/admin_signup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/solo/solo_signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/solo/solo_signup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/read.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/read.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/style/js/options.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/forms.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/admin_signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin_signup.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,16 +55,16 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../ClassRoom Js/classRoom" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\cyime\OneDrive\Bureau\IFOSUP\Bac 2\Projet de développement web\Egames\egames\resources\js" />
+      <recent name="C:\Users\cyime\OneDrive\Bureau\IFOSUP\Bac 2\Projet de développement web\Egames\egames\resources" />
       <recent name="C:\Users\cyime\OneDrive\Bureau\IFOSUP\Bac 2\Projet de développement web\Egames\egames\views" />
       <recent name="C:\Users\cyime\OneDrive\Bureau\IFOSUP\Bac 2\Projet de développement web\Egames\egames\views\success" />
       <recent name="C:\Users\cyime\OneDrive\Bureau\IFOSUP\Bac 2\Projet de développement web\Egames\egames\views\team" />
-      <recent name="C:\Users\cyime\OneDrive\Bureau\IFOSUP\Bac 2\Projet de développement web\Egames\egames\views\solo" />
-      <recent name="C:\Users\cyime\OneDrive\Bureau\IFOSUP\Bac 2\Projet de développement web\Egames\egames\views\game" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -87,6 +94,7 @@
       <workItem from="1610875753267" duration="631000" />
       <workItem from="1610879570019" duration="12552000" />
       <workItem from="1610892480899" duration="97000" />
+      <workItem from="1610892757078" duration="5405000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1609967204145</created>
@@ -179,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610892537404</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="change &quot;id&quot; by &quot;tableName_id&quot; and refactoring">
+      <created>1610892836257</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1610892836257</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,14 +235,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610398234145" />
-    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1610885451621">
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1610896382972">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610885451621" />
-    <state x="740" y="261" key="FileChooserDialogImpl" timestamp="1610892265086">
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610896382972" />
+    <state x="740" y="261" key="FileChooserDialogImpl" timestamp="1610892944907">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610892265086" />
+    <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610892944907" />
     <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1610875790182" />
     <state x="838" y="418" key="Github.ShareDialog" timestamp="1609966969200">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -237,17 +252,17 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="632" y="225" key="Github.UntrackedFilesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1609966979341" />
-    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1610880663817">
+    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1610893763034">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610880663817" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1610832665114">
+    <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610893763034" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1610892843558">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610832665114" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1610647857183">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610892843558" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1610896959775">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610647857183" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1610896959775" />
   </component>
 </project>

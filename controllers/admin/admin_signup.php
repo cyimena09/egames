@@ -17,7 +17,7 @@ if (checkEmptyArray($admin)) {
 } elseif ($admin['password'] != $admin['confirmPassword']) {
     $error = urlencode("Les mots de passe ne correspondent pas.");
     header("Location: ../../views/admin_signup.php?error=$error");
-} elseif (!empty(getPlayerEmail($player['email']))) {
+} elseif (!empty(getAdminEmail($admin['email']))) {
     $error = urlencode("Un Administrateur avec cet email à déjà été enregistré.");
     header("Location: ../../views/admin_signup.php?error=$error");
 } else {

@@ -6,7 +6,7 @@ include("../templates/navbar.php");
 <h2>Nouvel administrateur</h2>
 
 <div style="margin-left: 45%" >
-    <form style="display: flex; flex-direction: column" action="../controllers/admin/admin_signup.php" method="post">
+    <form style="display: flex; flex-direction: column" name="admin_signup" action="../controllers/admin/admin_signup.php" method="post" onsubmit="return validateForm()">
         <label for="firstName">Prénom</label>
         <input id="firstName" type="text" name="firstName"/>
 
@@ -26,6 +26,9 @@ include("../templates/navbar.php");
     </form>
     <div style="color: red;" class="error"><?php if (isset($_GET['error'])) { echo $_GET['error']; } ?></div>
 </div>
+
+<script type="text/javascript" src="../resources/js/forms.js"></script>
+
 
 <?php
 include("../templates/footer.php");

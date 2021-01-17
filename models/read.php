@@ -239,3 +239,18 @@ function getPlayerEmail($email) {
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
     return $result[0];
 }
+
+function getAdminEmail($email) {
+    include("connection.php");
+    $query = "SELECT * FROM admins a WHERE a.email = :email";
+    $query_params = array(':email'=> $email);
+
+    try {
+        $stmt = $db->prepare($query);
+        $result = $stmt->execute($query_params);
+    } catch(PDOException $ex) {
+        die("Failed query : " . $ex->getMessage());
+    }
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $result[0];
+}

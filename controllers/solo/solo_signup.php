@@ -35,7 +35,7 @@ if ($error == false) {
     $playerId = createPlayer($player, null);
     insertParticipation($playerId, null, $player['game']);
 
-    if(sendConfirmMail($player['email'])) {
+    if (sendConfirmMail($player['email'])) {
         // Si l'envoie du mail de confirmation réussi, on détruit la session.
         session_destroy();
         header("Location: ../../views/success_signup.php");
